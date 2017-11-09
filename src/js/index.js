@@ -10,7 +10,7 @@ $( document ).ready(function() {
       document.getElementById("myNav").style.width = "0%";
     }
 
-    $('.test').click(function(e) {
+    $('.fullprojectbtn').click(function(e) {
       openNav()
     })
 
