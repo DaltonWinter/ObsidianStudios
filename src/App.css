@@ -1,0 +1,137 @@
+
+.content {
+  position: relative;
+  top: 296px;
+}
+
+.wrapper {
+  position: relative;
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item {
+  float: left;
+  width: 43.715846994536%;
+  position: absolute;
+  left: 0px;
+  margin: 0;
+}
+
+.item-super-wide {
+  position: absolute;
+  width: 56.284153005464%;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.border {
+  border: 6px solid transparent;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: .571428571em 1.857142857em 1.5em;
+  color: #fff;
+  cursor: pointer;
+}
+
+.overlay-content {
+  height: 100%;
+  position: relative;
+}
+
+.quickview-span {
+  display: inline-block;
+  margin-right: 1.25em;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-color: transparent;
+}
+
+.quickview-span:hover {
+  border-color: #fdd02f;
+}
+
+.fullproject-span {
+  display: inline-block;
+  margin-right: 1.25em;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-color: transparent;
+}
+
+.fullproject-span:hover {
+  border-color: #fdd02f;
+}
+
+.block-links {
+  bottom: 0;
+  position: absolute;
+}
+
+.overlay {
+  display: none;
+}
+
+.hover:hover .overlay {
+  display: block;
+}
+
+.hover img{
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.hover:hover img{
+  -webkit-filter: brightness(50%);
+  filter: brightness(50%);
+}
+
+.overlay-page a {
+  color: black;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.overlay-page {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    right: 0;
+    top: 0;
+    background-color: white; /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+.overlay-page .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: black;
+}
+
+.overlay-stuff {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    color: black;
+}
