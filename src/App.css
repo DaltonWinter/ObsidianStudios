@@ -80,16 +80,22 @@ img {
 }
 
 .overlay {
-  display: none;
+  opacity: 0
 }
 
 .hover:hover .overlay {
-  display: block;
+  opacity:0; /* Completely invisible. */
+  transition: 1s; /* A 1 second transition. *
+  /*display: block !important;*/
 }
 
+/*.hover:hover .overlay {
+  display: block;
+}*/
+
 .hover img{
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 .hover:hover img{
@@ -109,7 +115,7 @@ a {
 .overlay-page {
     /* Height & width depends on how you want to reveal the overlay (see JS below) */
     height: 100%;
-    width: 0;
+    width: 0%;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     right: 0;
@@ -135,3 +141,28 @@ a {
     margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
     color: black;
 }
+
+.hover:hover .overlay {
+  opacity: 1;
+}
+
+
+
+
+/*@media only screen and (max-width: 980px) {
+  .item {
+    float: left;
+    width: 50%;
+    -moz-transition: opacity 300ms ease-in-out;
+    -o-transition: opacity 300ms ease-in-out;
+    -webkit-transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .item-super-wide {
+      width: 100%;
+  }
+}*/

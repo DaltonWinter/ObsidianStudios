@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Link, Switch } from'react-router-dom'
 import './App.css';
 
 import Index from './components/Index'
-import Project from './components/Project'
-
-
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 
 const images = [
   {
@@ -51,26 +47,75 @@ class App extends Component {
 
   constructor(props) {
     super(props)
-    this.state = { projectinfo: {index: 1} }
+    let index = parseInt(window.location.pathname.replace( /^\D+/g, ''))
+    if (isNaN(index)) {
+      index = 1
+    }
+    let open = false
+    if (window.location.pathname.indexOf('project') != -1) {
+      open = true
+    }
+    this.state = {
+      projectinfo: {
+        index: index,
+        open: open
+      },
+      loading: true
+    }
+  }
+
+  updateDimensions = () => {
+    this.setState({
+      ...this.state,
+      windowWidth: window.innerWidth,
+      windowHeight: window.innerHeight
+    })
+  }
+
+  onResize = () => {
+    this.updateDimensions()
+  }
+
+  async componentDidMount() {
+    if( typeof window !== 'undefined' ) {
+      window.addEventListener('resize', this.onResize, false)
+    }
+    setTimeout(() => this.setState({ ...this.state, loading: false }), 1500);
   }
 
   updateState = (int) => {
-    console.log('test', int)
     this.setState({
       ...this.state,
       projectinfo: {
-        index: int
+        index: int,
+        open: true
       }
     })
-
-    console.log('im updating the state')
   }
 
+  closeProjectPage = () => {
+    this.setState({
+      ...this.state,
+      projectinfo: {
+        index: 1,
+        open: false
+      }
+    })
+  }
 
   render() {
-    console.log('i should be rendering now')
+
+    const { loading } = this.state;
+    console.log(this.state)
+
+    if(loading) { // if your app get render immediately, remove this block
+      return null; // render null when app is not ready
+    }
+
     return (
-      <Index projectsData={ projectsData } updateState={this.updateState} projectinfo={ this.state.projectinfo } images={ images }/>
+      <div>
+        <Index closeProjectPage={ this.closeProjectPage } projectsData={ projectsData } updateState={this.updateState} projectinfo={ this.state.projectinfo } images={ images }/>
+      </div>
     );
   }
 }

@@ -1,11 +1,11 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 
-const Closebtn = () => {
+const Closebtn = ({closeProjectPage}) => {
   return (
     <Router>
-      <Link to="/" className="closebtn">&times;</Link>
+      <Link onClick={closeProjectPage} to="/" className="closebtn">&times;</Link>
     </Router>
   )
 }

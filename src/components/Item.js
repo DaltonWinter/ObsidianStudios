@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 import '../js/index.js';
 
 
@@ -9,8 +9,26 @@ const Item = ({image, updateState, projNumber}) => {
     updateState(projNumber)
   }
 
+  function divStyle() {
+    const secondRowTopCalc = ((window.innerWidth / 4.246031436031746) + 5)
+    const divStyle = {
+
+    }
+    if (projNumber === 1) {
+      divStyle['left'] = '43.7%'
+    }
+    if (projNumber === 2) {
+      divStyle['top'] = `${secondRowTopCalc}px`
+    }
+    if (projNumber === 3) {
+      divStyle['left'] = '56.3%'
+      divStyle['top'] = `${secondRowTopCalc}px`
+    }
+    return divStyle
+  }
+
   return (
-    <div className={image.class}>
+    <div className={image.class} style={divStyle()}>
       <div className="border">
         <div className="hover">
           <img src={image.imgUrl} alt=""></img>
