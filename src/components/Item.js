@@ -11,6 +11,7 @@ const Item = ({image, updateState, projNumber}) => {
 
   function divStyle() {
     const secondRowTopCalc = ((window.innerWidth / 4.246031436031746) + 5)
+    const thirdRowTopCalc = (window.innerWidth / 2.08955223880597)
     const divStyle = {
 
     }
@@ -23,6 +24,9 @@ const Item = ({image, updateState, projNumber}) => {
     if (projNumber === 3) {
       divStyle['left'] = '56.3%'
       divStyle['top'] = `${secondRowTopCalc}px`
+    }
+    if (projNumber === 4) {
+      divStyle['top'] = `${thirdRowTopCalc}px`
     }
     return divStyle
   }

@@ -20,6 +20,10 @@ const images = [
   {
     imgUrl: "https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/22539734_10210199970341060_5051456143057213633_n.jpg?oh=1c1fe7e889f95f4252c566f5fbbdd23f&oe=5A7897C4",
     class: "item"
+  },
+  {
+    imgUrl: "https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/22539734_10210199970341060_5051456143057213633_n.jpg?oh=1c1fe7e889f95f4252c566f5fbbdd23f&oe=5A7897C4",
+    class: "item-narrow"
   }
 ]
 
@@ -39,6 +43,10 @@ const projectsData = [
   {
     title: 'Fourth title',
     desc: 'This is the description yo!'
+  },
+  {
+    title: 'hey',
+    desc: 'test'
   }
 ]
 

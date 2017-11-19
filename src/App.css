@@ -19,6 +19,14 @@
   margin: 0;
 }
 
+.item-narrow {
+  width: 28.14207650275%;
+  float: left;
+  position: absolute;
+  left: 0px;
+  margin: 0;;
+}
+
 .item-super-wide {
   position: absolute;
   width: 56.284153005464%;
