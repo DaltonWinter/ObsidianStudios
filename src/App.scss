@@ -1,0 +1,647 @@
+//
+// .content {
+//   position: relative;
+//   top: 296px;
+// }
+//
+// .wrapper {
+//   position: relative;
+//   width: 96%;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+//
+// .item {
+//   float: left;
+//   width: 43.715846994536%;
+//   position: absolute;
+//   left: 0px;
+//   margin: 0;
+// }
+//
+// .item-narrow {
+//   width: 28.14207650275%;
+//   float: left;
+//   position: absolute;
+//   left: 0px;
+//   margin: 0;;
+// }
+//
+// .item-super-wide {
+//   position: absolute;
+//   width: 56.284153005464%;
+// }
+//
+// img {
+//   display: block;
+//   width: 100%;
+//   height: auto;
+// }
+//
+// .border {
+//   border: 6px solid transparent;
+// }
+//
+// .overlay {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   padding: .571428571em 1.857142857em 1.5em;
+//   color: #fff;
+//   cursor: pointer;
+// }
+//
+// .overlay-content {
+//   height: 100%;
+//   position: relative;
+// }
+//
+// .quickview-span {
+//   display: inline-block;
+//   margin-right: 1.25em;
+//   border-bottom-width: 2px;
+//   border-bottom-style: solid;
+//   border-color: transparent;
+// }
+//
+// .quickview-span:hover {
+//   border-color: #fdd02f;
+// }
+//
+// .fullproject-span {
+//   display: inline-block;
+//   margin-right: 1.25em;
+//   border-bottom-width: 2px;
+//   border-bottom-style: solid;
+//   border-color: transparent;
+// }
+//
+// .fullproject-span:hover {
+//   border-color: #fdd02f;
+// }
+//
+// .block-links {
+//   bottom: 0;
+//   position: absolute;
+// }
+//
+// .overlay {
+//   opacity: 0
+// }
+//
+// .hover:hover .overlay {
+//   opacity:0; /* Completely invisible. */
+//   transition: 1s; /* A 1 second transition. *
+//   /*display: block !important;*/
+// }
+//
+// /*.hover:hover .overlay {
+//   display: block;
+// }*/
+//
+// .hover img{
+//   -webkit-transition: all .5s ease;
+//   transition: all .5s ease;
+// }
+//
+// .hover:hover img{
+//   -webkit-filter: brightness(50%);
+//   filter: brightness(50%);
+// }
+//
+// .overlay-page a {
+//   color: black;
+// }
+//
+// a {
+//   color: white;
+//   text-decoration: none;
+// }
+//
+// .overlay-page {
+//     /* Height & width depends on how you want to reveal the overlay (see JS below) */
+//     height: 100%;
+//     width: 0%;
+//     position: fixed; /* Stay in place */
+//     z-index: 1; /* Sit on top */
+//     right: 0;
+//     top: 0;
+//     background-color: white; /* Black w/opacity */
+//     overflow-x: hidden; /* Disable horizontal scroll */
+//     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+// }
+//
+// .overlay-page .closebtn {
+//     position: absolute;
+//     top: 20px;
+//     right: 45px;
+//     font-size: 60px;
+//     color: black;
+// }
+//
+// .overlay-stuff {
+//     position: relative;
+//     top: 25%; /* 25% from the top */
+//     width: 100%; /* 100% width */
+//     text-align: center; /* Centered text/links */
+//     margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+//     color: black;
+// }
+//
+// .hover:hover .overlay {
+//   opacity: 1;
+// }
+//
+//
+//
+//
+// /*@media only screen and (max-width: 980px) {
+//   .item {
+//     float: left;
+//     width: 50%;
+//     -moz-transition: opacity 300ms ease-in-out;
+//     -o-transition: opacity 300ms ease-in-out;
+//     -webkit-transition: opacity 300ms ease-in-out;
+//     transition: opacity 300ms ease-in-out;
+//     margin: 0;
+//   }
+// }
+//
+// @media only screen and (max-width: 980px) {
+//   .item-super-wide {
+//       width: 100%;
+//   }
+// }*/
+//
+// html {
+//   background: url('https://i.imgur.com/bVTWvRB.jpg') no-repeat center center fixed;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
+//
+// .video-container {
+//
+// }
+//
+// .fa-instagram {
+//   margin-right: 10px;
+// }
+//
+// .fa-vimeo-square {
+//   margin-left: 10px;
+// }
+//
+//
+// .fa:hover {
+//   cursor: pointer;
+// }
+// .icons-container {
+//   position: absolute;
+//   bottom: 0;
+//   text-align: center;
+//   width: 100%;
+//   margin-bottom: 100px;
+// }
+//
+// .hmtl5-video-player:hover {
+//
+// }
+
+//scss
+.content {
+  position: relative;
+  top: 296px;
+}
+
+.wrapper {
+  position: relative;
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item {
+  float: left;
+  width: 43.715846994536%;
+  position: absolute;
+  left: 0px;
+  margin: 0;
+}
+
+.item-narrow {
+  width: 28.14207650275%;
+  float: left;
+  position: absolute;
+  left: 0px;
+  margin: 0;
+}
+
+.item-super-wide {
+  position: absolute;
+  width: 56.284153005464%;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.border {
+  border: 6px solid transparent;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: .571428571em 1.857142857em 1.5em;
+  color: #fff;
+  cursor: pointer;
+}
+
+.overlay-content {
+  height: 100%;
+  position: relative;
+}
+
+.quickview-span, .fullproject-span {
+  display: inline-block;
+  margin-right: 1.25em;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-color: transparent;
+  &:hover {
+    border-color: #fdd02f;
+  }
+}
+
+.block-links {
+  bottom: 0;
+  position: absolute;
+}
+
+.overlay {
+  opacity: 0;
+}
+
+.hover {
+  &:hover .overlay {
+    opacity: 0;
+    /* Completely invisible. */
+    transition: 1s;
+                /* A 1 second transition. *
+/*display: block !important;*/
+  }
+  img {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  &:hover img {
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
+  }
+}
+
+/*.hover:hover .overlay {
+  display: block;
+}*/
+
+.overlay-page a {
+  color: black;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.overlay-page {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  right: 0;
+  top: 0;
+  background-color: white;
+  /* Black w/opacity */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: black;
+  }
+}
+
+.overlay-stuff {
+  position: relative;
+  top: 25%;
+  /* 25% from the top */
+  width: 100%;
+  /* 100% width */
+  text-align: center;
+  /* Centered text/links */
+  margin-top: 30px;
+  /* 30px top margin to avoid conflict with the close button on smaller screens */
+  color: black;
+}
+
+.hover:hover .overlay {
+  opacity: 1;
+}
+
+/*@media only screen and (max-width: 980px) {
+  .item {
+    float: left;
+    width: 50%;
+    -moz-transition: opacity 300ms ease-in-out;
+    -o-transition: opacity 300ms ease-in-out;
+    -webkit-transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .item-super-wide {
+      width: 100%;
+  }
+}*/
+$body-bg: transparent;
+
+html {
+  background: url('https://i.imgur.com/bVTWvRB.jpg') no-repeat center center fixed;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.video-container {}
+
+.fa-instagram {
+  margin-right: 10px;
+}
+
+.fa-vimeo-square {
+  margin-left: 10px;
+}
+
+.fa:hover {
+  cursor: pointer;
+}
+
+.icons-container {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.hmtl5-video-player:hover {}
+//
+// @font-face {
+// 	font-family: 'icomoon';
+// 	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.eot?3qkin2');
+// 	src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.eot?#iefix3qkin2') format('embedded-opentype'),
+// 		url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.woff?3qkin2') format('woff'),
+// 		url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.ttf?3qkin2') format('truetype'),
+// 		url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.svg?3qkin2#icomoon') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+//
+// .social-networks {
+//   margin: 0 0 35px;
+//   padding: 0;
+//   font-size: 0;
+//   text-align: center;
+//
+//   li {
+//     display: inline-block;
+//   }
+//
+//   a {
+//     display: block;
+//     position: relative;
+//     margin: 0 7px;
+//     width: 68px;
+//     height: 68px;
+//     font-size: 0;
+//     line-height: 0;
+//     text-align: center;
+//     text-decoration: none;
+//
+//     &:before {
+//       content: "";
+//       position: absolute;
+//       display: inline-block;
+//       top: 50%;
+//       left: 50%;
+//       width: 100%;
+//       height: 100%;
+//       margin-top: -50%;
+//       margin-left: -50%;
+//       background-color: black;
+//       transition: all 400ms;
+//     }
+//
+//     &:after {
+//       position: relative;
+//       display: block;
+//       font-family: 'icomoon';
+//       speak: none;
+//       font-style: normal;
+//       font-weight: normal;
+//       font-variant: normal;
+//       text-transform: none;
+//       line-height: 1;
+//       color: #fff;
+//       font-size: 45px;
+//       line-height: 66px;
+//     }
+//
+//     &:hover, &:focus {
+//       text-decoration: none;
+//     }
+//   }
+//
+//   &.round a:before {
+//     border-radius: 100px;
+//   }
+//
+//   &.diamond a:before {
+//     transform: rotate(-45deg);
+//   }
+//
+//   &.rise-up a:hover, &.rise-up a:focus {
+//     transition: transform 0.4s ease-out;
+//     transform: translateY(-15px);
+//   }
+//
+//   &.to-square a:hover:before, &.to-square a:focus:before {
+//     border-radius: 0;
+//   }
+//
+//   &.to-round a:hover:before, &.to-round a:focus:before {
+//     border-radius: 100px;
+//   }
+//
+//   &.spin-icon a:hover:after, &.spin-icon a:focus:after {
+//     transition: transform 0.4s ease-out;
+//     transform: rotateZ(360deg);
+//   }
+//
+//   $networks: linkedin '\eac9' #0077b5, facebook '\e603' #3b5998, twitter '\e618' #00b0ed, github '\eab1' #4183c4, instagram '\e604' #3f729b, vimeo '\ea9c' #1ab7ea, twitch '\ea9b' #6441a5, pinterest '\e605' #cc2127;
+//
+//   @each $network in $networks {
+//      .icon-#{nth($network, 1)} {
+//        &:after {
+//          content: '#{nth($network, 2)}';
+//       }
+//
+//       &:hover:before, &:focus:before {
+//         background: nth($network, 3);
+//       }
+//     }
+//   }
+// }
+//
+// @keyframes bounce {
+//   0%, 20%, 53%, 80%, 100% {
+//     transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+//     transform: translate3d(0,0,0);
+//   }
+//
+//   40% {
+//     transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+//     transform: translate3d(0, -6px, 0);
+//   }
+//
+//   70% {
+//     transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+//     transform: translate3d(0, -4px, 0);
+//   }
+//
+//   90% {
+//     transform: translate3d(0,-2px,0);
+//   }
+// }
+
+/* Extra stuff just to make the demo pretty. */
+// body {
+//   padding: 35px 0;
+//   color: #fff;
+//   font-family: 'Lora', serif;
+//   font-size: 14px;
+//   text-align: center;
+//   line-height: 24px;
+//   background: #262730 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/noise-bg.png) repeat 0 0;
+// }
+//
+// h1 {
+//   margin-bottom: 0px;
+//   font-size: 55px;
+//   line-height: 1.0;
+// }
+//
+// h2 {
+//   font-family: 'Montserrat', sans-serif;
+//   margin-bottom: 45px;
+//   font-size: 12px;
+//   text-transform: uppercase;
+// }
+//
+// footer {
+//   margin: 75px 0 35px;
+// }
+//
+// a {
+//   color: #4183c4;
+//   text-decoration: none;
+//
+//   &:hover {
+//     color: lighten(#4183c4, 15%);
+//   }
+// }
+
+$background: hsl(210, 45, 10);
+html{
+  box-sizing: border-box;}
+*, *:before, *:after{
+  box-sizing: inherit;}
+html{
+
+  font-size: .625em ;}// 10px for rems
+.soc {
+  display: block;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 48px ;// IE8
+  padding: 4.8rem;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin: 12px ;// IE8
+    margin: 1.2rem;
+  }
+  a, svg {
+    display: block;
+  }
+  a {
+    position: relative ;// IE8
+    height: 96px ;// IE8
+    height: 9.6rem;
+    width: 96px ;// IE8
+    width: 9.6rem;
+  }
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+  em {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: -.75em;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+%social-icon-hover {
+  border-radius: 100%;
+  color: $background ;// IE8
+  fill: $background;
+  transform: scale(1.25);
+  transition: background-color .5s, transform .5s ease-out;
+}
+@for $i from 1 through 30 {
+  .icon-#{$i} {
+    color: white ;// IE8
+    fill: white;
+    &:hover {
+      background: white;
+      @extend %social-icon-hover;
+    }
+  }
+}
