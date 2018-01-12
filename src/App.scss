@@ -247,7 +247,7 @@
 
 img {
   display: block;
-  width: 100%;
+  // width: 100%;
   height: auto;
 }
 
@@ -392,7 +392,13 @@ html {
   background-size: cover;
 }
 
-.video-container {}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
 
 .fa-instagram {
   margin-right: 10px;
@@ -406,6 +412,13 @@ html {
   cursor: pointer;
 }
 
+video {
+  width: 100%;
+  height: 100%;
+  left: -50%;
+  display: block;
+}
+
 .icons-container {
   position: absolute;
   bottom: 0;
@@ -414,7 +427,9 @@ html {
   margin-bottom: 35px;
 }
 
-.hmtl5-video-player:hover {}
+.hmtl5-video-player:hover {
+
+}
 //
 // @font-face {
 // 	font-family: 'icomoon';
