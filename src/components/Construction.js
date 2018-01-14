@@ -3,6 +3,9 @@ import ReactPlayer from 'react-player'
 import './Construction.css'
 import hey from './test2.mp4'
 import history from './History'
+import FlatButton from 'material-ui/FlatButton';
+
+import animation from './LogoText.mp4'
 
 const Construction = () => {
 
@@ -12,11 +15,16 @@ const Construction = () => {
   }
 
 
+
+
+
   return (
   <div className="construction">
 
 
-    <button onClick={() => sendToGalleryPage()} className="gallery-button">Enter</button>
+    <ReactPlayer className="test" id="react-player" loop="true" style={{}} playing url={[animation]} />
+
+    <button style={{zIndex: '10000'}} onClick={() => sendToGalleryPage()} className="gallery-button">Enter</button>
 
 
     <ul className = "soc">

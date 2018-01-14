@@ -25,51 +25,18 @@ const tilesData = [
   },
   {
     img: 'images/grid-list/camera-813814_640.jpg',
-    title: 'Photography',
+    title: 'Concert Photography',
     author: 'Danson67',
     featured: true,
   },
   {
-    img: 'images/grid-list/morning-819362_640.jpg',
-    title: 'Morning',
+    img: 'https://photos-5.dropbox.com/t/2/AACjEtSxDBpwN83QuPUZ9nEDAbQxki6QuE7Rf-LeJMylSw/12/729119053/jpeg/32x32/1/_/1/2/Photo%20Jan%2003%2C%2012%2022%2002%20PM.jpg/EJyMu-0FGCUgBygH/AwGiuGbZTm0g3jSQFBwp_5eGL_QeDXGS6s4uYW5aTh0?size=1600x1200&size_mode=3',
+    title: 'Photo Shoots',
     author: 'fancycrave1',
+    featured: true,
 
   },
-  {
-    img: 'images/grid-list/hats-829509_640.jpg',
-    title: 'Hats',
-    author: 'Hans',
-  },
-  {
-    img: 'images/grid-list/honey-823614_640.jpg',
-    title: 'Honey',
-    author: 'fancycravel',
-  },
-  {
-    img: 'images/grid-list/vegetables-790022_640.jpg',
-    title: 'Vegetables',
-    author: 'jill111',
-  },
-  {
-    img: 'images/grid-list/water-plant-821293_640.jpg',
-    title: 'Water plant',
-    author: 'BkrmadtyaKarki',
-  },
-  {
-    img: 'images/grid-list/water-plant-821293_640.jpg',
-    title: 'Water plant',
-    author: 'BkrmadtyaKarki',
-  },
-  {
-    img: 'images/grid-list/water-plant-821293_640.jpg',
-    title: 'Water plant',
-    author: 'BkrmadtyaKarki',
-  },
-  {
-    img: 'images/grid-list/water-plant-821293_640.jpg',
-    title: 'Water plant',
-    author: 'BkrmadtyaKarki',
-  },
+
 ];
 
 /**
@@ -86,7 +53,7 @@ const GalleryGrid = () => (
     >
       {tilesData.map((tile) => (
         <GridTile
-          onClick={() => history.push('/page/' + tile.title)}
+          onClick={() => history.push('/' + tile.title.replace(' ', ''))}
           key={tile.img}
           title={tile.title}
           actionIcon={<IconButton></IconButton>}

@@ -4,13 +4,15 @@ import {Router,Route,Link,Switch} from 'react-router-dom'
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-
+import GraphicDesign from './GraphicDesign'
 import Index from './Index'
 import Construction from './Construction'
 import Gallery from './Gallery'
 import history from './History'
 import ReactPlayer from 'react-player'
 import Page from './Page'
+import Form from './Form'
+import Profile from './Profile'
 
 const images = [{
     imgUrl: "https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/22539734_10210199970341060_5051456143057213633_n.jpg?oh=1c1fe7e889f95f4252c566f5fbbdd23f&oe=5A7897C4",
@@ -137,7 +139,9 @@ class App extends Component {
         <Router history={history}>
           <Switch>
             <Route path="/gallery" render={() => <Gallery />} />
-            <Route path="/page/:title" render={() => <Page />} />
+            <Route path="/GraphicDesign" render={() => <GraphicDesign />} />
+            <Route path="/Construction" render={() => <Construction />} />
+              <Route path="/Profile" render={() => <Profile />} />
             <Construction />
           </Switch>
         </Router>
