@@ -13,6 +13,7 @@ import ReactPlayer from 'react-player'
 import Page from './Page'
 import Form from './Form'
 import Profile from './Profile'
+import Login from './Login'
 
 const images = [{
     imgUrl: "https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/22539734_10210199970341060_5051456143057213633_n.jpg?oh=1c1fe7e889f95f4252c566f5fbbdd23f&oe=5A7897C4",
@@ -142,6 +143,7 @@ class App extends Component {
             <Route path="/GraphicDesign" render={() => <GraphicDesign />} />
             <Route path="/Construction" render={() => <Construction />} />
               <Route path="/Profile" render={() => <Profile />} />
+                <Route path="/Login" render={() => <Login />} />
             <Construction />
           </Switch>
         </Router>

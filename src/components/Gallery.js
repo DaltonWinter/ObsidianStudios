@@ -24,12 +24,6 @@ const tilesData = [
     featured: true,
   },
   {
-    img: 'images/grid-list/camera-813814_640.jpg',
-    title: 'Concert Photography',
-    author: 'Danson67',
-    featured: true,
-  },
-  {
     img: 'https://photos-5.dropbox.com/t/2/AACjEtSxDBpwN83QuPUZ9nEDAbQxki6QuE7Rf-LeJMylSw/12/729119053/jpeg/32x32/1/_/1/2/Photo%20Jan%2003%2C%2012%2022%2002%20PM.jpg/EJyMu-0FGCUgBygH/AwGiuGbZTm0g3jSQFBwp_5eGL_QeDXGS6s4uYW5aTh0?size=1600x1200&size_mode=3',
     title: 'Photo Shoots',
     author: 'fancycrave1',
@@ -79,7 +73,7 @@ const styles = {
   },
   gridList: {
     width: 1000,
-    height: 700,
+    height: 1000,
     overflowY: 'auto',
   },
 };
@@ -89,6 +83,7 @@ return (
     <GalleryGrid />
     <DrawerClass />
   </div>
+
 )
 
 
